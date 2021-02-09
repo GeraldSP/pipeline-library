@@ -22,7 +22,7 @@ def call(BinaryBuildInput input) {
     assert input.buildFromFlag?.trim()   : "Param buildFromFlag should be defined."
     assert input.buildFromPath?.trim()   : "Param buildFromPath should be defined."
 
-    openshift.loglevel("debug")
+    openshift.loglevel(5)
 
     openshift.withCluster(input.clusterAPI, input.clusterToken) {
         openshift.withProject(input.projectName) {
